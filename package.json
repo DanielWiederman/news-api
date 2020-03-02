@@ -1,0 +1,48 @@
+{
+   "name": "generic-store",
+   "version": "1.0.0",
+   "description": "",
+   "main": "index.js",
+   "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "node index.ts",
+      "start": "nodemon src/index.ts",
+      "migrate": "yarn typeorm:cli migration:run",
+      "migrateRevert": "yarn typeorm:cli migration:revert",
+      "typeorm": "ts-node ./node_modules/typeorm/cli"
+   },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {
+      "@types/bcrypt": "^3.0.0",
+      "@types/body-parser": "^1.17.1",
+      "@types/express": "^4.17.2",
+      "@types/express-flash": "^0.0.2",
+      "@types/express-session": "^1.15.16",
+      "@types/node": "^13.5.3",
+      "@types/passport": "^1.0.2",
+      "@types/passport-local": "^1.0.33",
+      "bcrypt": "^4.0.0",
+      "class-transformer": "^0.2.3",
+      "class-validator": "^0.11.0",
+      "express": "^4.17.1",
+      "express-flash": "^0.0.2",
+      "express-session": "^1.17.0",
+      "mysql": "^2.14.1",
+      "nodemon": "^2.0.2",
+      "passport": "^0.4.1",
+      "passport-local": "^1.0.0",
+      "prettier": "^1.19.1",
+      "pug": "^2.0.4",
+      "reflect-metadata": "^0.1.10",
+      "routing-controllers": "^0.8.1-alpha.2",
+      "ts-node": "^8.6.2",
+      "typeorm": "^0.2.22",
+      "typescript": "^3.7.5"
+   },
+   "devDependencies": {
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   }
+}
