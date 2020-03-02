@@ -4,25 +4,33 @@ import {
   Column,
   CreateDateColumn,
   UpdateDateColumn,
-  BaseEntity
+  BaseEntity,
+  OneToMany,
+  JoinColumn,
+  ManyToOne
 } from "typeorm";
+import { User } from "./User";
 
-@Entity({ name: "users" })
-export class User extends BaseEntity {
+@Entity({ name: "articles" })
+export class Articles extends BaseEntity {
   @PrimaryGeneratedColumn({ type: "bigint" })
   id: number;
 
   @Column({ nullable: true })
-  first_name: string;
+  title: string;
 
   @Column({ nullable: true })
-  last_name: string;
+  subtitle: string;
 
   @Column({ nullable: true })
-  email: string;
+  body: string;
+
+  @ManyToOne(() => User, { onDelete: "CASCADE" })
+  @JoinColumn({ name: "author_id" })
+  user: User;
 
   @Column({ nullable: true })
-  password: string;
+  author_id: number;
 
   @Column({ nullable: true })
   birthday: Date;

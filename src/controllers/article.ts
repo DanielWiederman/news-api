@@ -15,8 +15,8 @@ import { Request, Response } from "express";
 import { User } from "../entity/User";
 import { isLoggedIn } from "../middlewares/isLoggedIn";
 
-@JsonController("/users")
-export class UserController {
+@JsonController("/article")
+export class ArticleController {
   @Get("/get")
   async getAll(@Req() request: Request, @Res() response: Response) {
     try {
